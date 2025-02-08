@@ -21,6 +21,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func customizeAppearance() {
+        
+        UINavigationBar.appearance().prefersLargeTitles = true  // Включаем большие заголовки для всего приложения
+        UINavigationBar.appearance().largeTitleTextAttributes = [
+            .font: UIFont.systemFont(ofSize: 34, weight: .bold)  // Настраиваем шрифт для больших заголовков
+        ]
+        
+        // Настройка глобального шрифта для UILabel
+        UILabel.appearance().font = UIFont.systemFont(ofSize: 30, weight: .regular)
+        UIButton.appearance().titleLabel?.font = UIFont.systemFont(ofSize: 30, weight: .medium)
+        UITabBarItem.appearance().setTitleTextAttributes([.font: UIFont.systemFont(ofSize: 14)], for: .normal)
+        
+        // Настройка шрифта для UINavigationBar (заголовки)
+        UINavigationBar.appearance().titleTextAttributes = [
+            .font: UIFont.boldSystemFont(ofSize: 27)
+        ]
+        
+        // Настройка шрифта для кнопок
+        //UIButton.appearance().titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .medium)
+        
+        
+        
         // Загружаем цвет из Assets
         let primaryColor = UIColor(named: "AppPrimaryColor") ?? UIColor(red: 51/255, green: 107/255, blue: 78/255, alpha: 1)
         

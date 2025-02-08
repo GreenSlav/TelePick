@@ -12,6 +12,7 @@ class AccountsViewController: UIViewController {
     func setupUI() {
         // Кнопка добавления аккаунта
         let addAccountButton = UIButton(type: .system)
+        addAccountButton.titleLabel?.font = UIFont.systemFont(ofSize: 22, weight: .regular)
         addAccountButton.setTitle("Добавить аккаунт", for: .normal)
         addAccountButton.addTarget(self, action: #selector(addAccountTapped), for: .touchUpInside)
         
